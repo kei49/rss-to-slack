@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 
 @dataclass
@@ -20,13 +21,13 @@ def create_feeds() -> list[Feed]:
 
 @dataclass
 class Config:
-  slack_webhook_url_yahoo = "https://hooks.slack.com/services/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"
-  slack_webhook_url_prtimes = "https://hooks.slack.com/services/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"
-  slack_webhook_url_tdnet = "https://hooks.slack.com/services/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"
+  slack_webhook_url_yahoo = os.environ['SLACK_WEBHOOK_URL_YAHOO']
+  slack_webhook_url_prtimes = os.environ['SLACK_WEBHOOK_URL_PRTIMES']
+  slack_webhook_url_tdnet = os.environ['SLACK_WEBHOOK_URL_TDNET']
   black_words_list = [
     'コロナ', '共同通信', '天気', 'Nosweb.jp', 'ベストカーWeb', 'Webモーターマガジン', 'くるまのニュース', '乗りものニュース', '日刊自動車新聞', 'スポーツ', 'VAGUE', 'WEB CARTOP',
     'ウェザーニュース', 'テレビ朝日系', 'Aviation Wire', 'LIMO', '(レスポンス)', 'AUTOCAR JAPAN', '(Auto Messe Web)', '(WWDJAPAN.com)', 'ねとらぼ', '(CHANTO WEB)', '(ドライバーWeb)',
-    '(WATCHNAVI Salon)', '(ABEMA TIMES)']
+    '(WATCHNAVI Salon)', '(ABEMA TIMES)', '(ダイヤモンド・オンライン)', '人身事故', '(WEBヤングマシン)', '(ITmedia ビジネスオンライン)', '(バイクのニュース)']
   white_words_list = [
     'マスク氏', '円安'
   ]
