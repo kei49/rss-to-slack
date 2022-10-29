@@ -19,7 +19,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poe.tasks]
-run_once = { script = "src.script:run_once" }
-run = { script = "src.script:run" }
-read_all = { script = "src.script:read_all" }
-debug = { script = "src.script:debug" }
+run_once = { script = "src.scripts.main:run_once" }
+run = { script = "src.scripts.main:run" }
+read_all = { script = "src.scripts.mark_all_read:mark_all_read" }
+debug = { script = "src.scripts.main:debug" }
