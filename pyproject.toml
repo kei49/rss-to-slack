@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "rss-to-slack"
+version = "0.1.0"
+description = ""
+authors = ["Kei Shimizu <suns.manage.k@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10.6"
+reader = "^3.2"
+slack-sdk = "^3.19.2"
+poethepoet = "^0.16.4"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poe.tasks]
+run_once = { script = "src.script:run_once" }
+run = { script = "src.script:run" }
+read_all = { script = "src.script:read_all" }
+debug = { script = "src.script:debug" }
