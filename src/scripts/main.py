@@ -1,5 +1,6 @@
 from time import sleep
 
+import src.init_env
 from src.filter import filter_out_black_words
 from src.slack import MessageType, SlackClient
 from src.parser import parse_entry, parse_entry_search_result
