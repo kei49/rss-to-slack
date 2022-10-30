@@ -53,16 +53,19 @@ def run_once():
 def debug():
     feeds = create_feeds()
     
-    feed = feeds[-1]
+    feed = feeds[0]
     reader = setup_feed(feed.db, feed.url)
 
     reader.update_feeds()
-    entries = list(reader.get_entries(read=False, limit=5))
+    entries = list(reader.get_entries(read=True, limit=5))
     
     for entry in entries:
         id, updated, title, link, author, published, summary, content, read = parse_entry(entry)
         
         print(id, title, published, summary)
+        
+        slack = SlackClient(MessageType.YAHOO)
+        slack.send_rss_feed(feed.name, link, title, summary)
         
         
   # reader.update_search()

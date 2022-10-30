@@ -1,6 +1,8 @@
 import os
 from dataclasses import dataclass
 
+import src.init_env
+
 @dataclass
 class Feed:
   name: str
