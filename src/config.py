@@ -31,7 +31,9 @@ class Config:
     'ウェザーニュース', 'テレビ朝日系', 'Aviation Wire', 'LIMO', '(レスポンス)', 'AUTOCAR JAPAN', '(Auto Messe Web)', '(WWDJAPAN.com)', 'ねとらぼ', '(CHANTO WEB)', '(ドライバーWeb)',
     '(WATCHNAVI Salon)', '(ABEMA TIMES)', '(ダイヤモンド・オンライン)', '人身事故', '(WEBヤングマシン)', '(ITmedia ビジネスオンライン)', '(バイクのニュース)',
     '(Fav-Log by ITmedia)', '(聯合ニュース)', '(Impress Watch)', '(ITmedia Mobile)', '(ウェザーマップ)', 'tenki.jp', '(PHILE WEB)', '(BuzzFeed Japan)', '(webCG)',
-    '(＆GP)', '(FRIDAY)', '(ファイナンシャルフィールド)', '梨泰院', '(鉄道コム)', '(食品産業新聞社ニュースWEB)', '(アスキー)', '(GetNavi web)', '(All About)', '(産経新聞)']
+    '(＆GP)', '(FRIDAY)', '(ファイナンシャルフィールド)', '梨泰院', '(鉄道コム)', '(食品産業新聞社ニュースWEB)', '(アスキー)', '(GetNavi web)', '(All About)', '(産経新聞)',
+    '(週刊SPA!)', '(NEWSポストセブン)', '(アフロ)', '(ITmedia PC USER)', '(MONOist)', '(モーサイ)', '(BCN)', '(ニュースイッチ)', '(MotorFan)', '(AERA dot.)', '(Merkmal)'
+    ]
   white_words_list = [
     'マスク氏', '円安'
   ]
