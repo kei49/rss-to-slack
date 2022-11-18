@@ -37,8 +37,12 @@ def run_once():
               slack = SlackClient(MessageType.YAHOO)
               slack.send_rss_feed(feed.name, link, title, summary)
             elif feed.name == "tdnet":
-              slack = SlackClient(MessageType.TDNET)
-              slack.send_rss_feed(feed.name, id, f"{title} ({published})")
+              pass
+              # slack = SlackClient(MessageType.TDNET)
+              # slack.send_rss_feed(feed.name, id, f"{title} ({published})")
+            elif 'sg-' in feed.name:
+              slack = SlackClient(MessageType.SG_NEWS)
+              slack.send_rss_feed(feed.name, link, title)
             else:
               continue
             

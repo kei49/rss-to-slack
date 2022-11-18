@@ -9,6 +9,7 @@ class MessageType(Enum):
     YAHOO = auto()
     PRTIMES = auto()
     TDNET = auto()
+    SG_NEWS = auto()
 
 
 class SlackClient():
@@ -24,6 +25,8 @@ class SlackClient():
                 url = self.config.slack_webhook_url_prtimes
             case MessageType.TDNET:
                 url = self.config.slack_webhook_url_tdnet
+            case MessageType.SG_NEWS:
+                url = self.config.slack_webhook_url_singapore
             case _:
                 print("INVALID WBEHOOK URL")
 
