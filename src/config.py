@@ -18,7 +18,16 @@ def create_feeds() -> list[Feed]:
     Feed('yahoo-it', "https://news.yahoo.co.jp/rss/categories/it.xml", 'data/yahoo-it.sqlite'),
     # Feed('prtimes', "https://prtimes.jp/index.rdf", 'data/prtimes.sqlite')
     Feed('tdnet', "https://webapi.yanoshin.jp/webapi/tdnet/list/recent.rss", 'data/tdnet.sqlite'),
-    Feed('sg-theindependent', 'https://theindependent.sg/feed/', 'data/sg-theindependet.sqlite')
+    Feed('sg-theindependent', 'https://theindependent.sg/feed/', 'data/sg-theindependet.sqlite'),
+    Feed('sg-tr-emeritus', 'https://www.tremeritus.net/feed/', 'data/sg-tr-emeritus.sqlite'),
+    Feed('sg-singaporestart', 'http://feeds.singaporestar.com/rss/a677a0718b69db72', 'data/sg-singaporestart.sqlite'),
+    Feed('sg-newsnet', 'http://feeds.singaporenews.net/rss/a677a0718b69db72', 'data/sg-newsnet.sqlite'),
+    Feed('sg-business-review', 'https://sbr.com.sg/rss2/news', 'data/sg-business-review.sqlite'),
+    Feed('sg-localnews', 'https://localnewsingapore.com/feed/', 'data/sg-localnews.sqlite'),
+    Feed('sg-straitstimes-singapore', 'https://www.straitstimes.com/news/singapore/rss.xml', 'data/sg-straitstimes-singapore.sqlite'),
+    Feed('sg-straitstimes-business', 'https://www.straitstimes.com/news/business/rss.xml', 'data/sg-straitstimes-business.sqlite'),
+    Feed('sg-straitstimes-world', 'https://www.straitstimes.com/news/world/rss.xml', 'data/sg-straitstimes-world.sqlite'),
+    Feed('sg-straitstimes-asia', 'https://www.straitstimes.com/news/asia/rss.xml', 'data/sg-straitstimes-asia.sqlite'),
     ]
   
 

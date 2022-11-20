@@ -63,3 +63,17 @@ class SlackClient():
                 }
             ]
         )
+        
+    def send_rss_feeds_as_block(self, feed_name: str, contents: list[str]) -> None:
+        self.webhook.send(
+            text=f"{feed_name} RSS",
+            blocks=[
+                {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": content
+                    }
+                } for content in contents
+            ]
+        )
