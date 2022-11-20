@@ -35,7 +35,7 @@ def run_once_for_block():
       else:
         continue
     
-      contents = []
+      contents = [f"{feed.name} RSS"]
       
       for entry in entries:
           id, updated, title, link, author, published, summary, content, read = parse_entry(entry)
@@ -54,7 +54,7 @@ def run_once_for_block():
             
           reader.mark_entry_as_read(entry)
           
-      slack.send_rss_feeds_as_block(feed.name, contents)
+      slack.send_rss_feeds_as_block(contents)
       
       print(f"{feed.name} had {len(contents)} effective entries")
       
