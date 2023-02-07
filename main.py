@@ -1,10 +1,9 @@
 import uvicorn
 
-from src.scripts.main import run
+from src.fastapi import app
 
-def app():
-    run()
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=8001, log_level="info") # , reload=True)
+    pass
+    # uvicorn.run("main:app", port=8001, log_level="info") # , reload=True)

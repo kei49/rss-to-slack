@@ -7,14 +7,6 @@ from src.parser import parse_entry, parse_entry_search_result
 from src.config import create_feeds
 from src.feed import setup_feed
 
-      
-def run():
-  while True:
-    # run_once()
-    run_once_for_block()
-    
-    sleep(60*20)
-    
 
 def run_once_for_block():
   feeds = create_feeds()
