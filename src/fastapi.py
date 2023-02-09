@@ -17,7 +17,7 @@ def health_check():
     return "ok"
 
 
-@app.post("/rss", response_model=ResponseModel)
+@app.get("/rss", response_model=ResponseModel)
 def run_rss_to_slac():
     print(f"Starting /rss")
     
