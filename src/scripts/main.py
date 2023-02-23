@@ -5,7 +5,7 @@ from src.filter import filter_out_black_words
 from src.slack import MessageType, SlackClient
 from src.parser import parse_entry, parse_entry_search_result
 from src.config import create_feeds
-from src.feed import setup_feed
+from src.feed import setup_feed, delete_feed_with_too_many_entries
 
 
 def run_once_for_block():
@@ -13,8 +13,11 @@ def run_once_for_block():
 
   for feed in feeds:
       reader = setup_feed(feed.db, feed.url)
+      delete_feed_with_too_many_entries(reader, feed.db, feed.url)
 
       reader.update_feeds()
+      # delete_old_entries(reader)
+      
       entries = list(reader.get_entries(read=False))
       
       if "yahoo" in feed.name:
